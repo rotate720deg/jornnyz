@@ -39,5 +39,5 @@
       <text>快速新建云函数</text>
     </navigator>
   </view>
-
+  <button bindtap='changeData'>点我</button>
 </view>

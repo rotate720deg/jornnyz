@@ -116,5 +116,24 @@ Page({
       }
     })
   },
-
+  changeData(){
+    const db = wx.cloud.database()
+    const coachs = db.collection('coach')
+    // coachs.add({
+    //   data: {
+    //     name: 'jyc'
+    //   }
+    // }).then(res => {
+    //   console.log(res)
+    // })
+    coachs.doc('XEVJZ8DR1TiNr2SA').update({
+      data: {
+        name: 'yeye'
+      }
+    }).then(res => {
+      console.log(res)
+    }).catch(err => {
+      console.log(err)
+    })
+  }
 })
