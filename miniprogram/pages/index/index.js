@@ -7,7 +7,8 @@ Page({
     userInfo: {},
     logged: false,
     takeSession: false,
-    requestResult: ''
+    requestResult: '',
+    coach: {}
   },
 
   onLoad: function() {
@@ -126,11 +127,11 @@ Page({
     // }).then(res => {
     //   console.log(res)
     // })
-    coachs.doc('XEVJZ8DR1TiNr2SA').update({
-      data: {
-        name: 'yeye'
-      }
-    }).then(res => {
+    coachs.doc('XEMzAeSiwXKAQoAE').get().
+    then(res => {
+      this.setData({
+        coach: res.data
+      })
       console.log(res)
     }).catch(err => {
       console.log(err)

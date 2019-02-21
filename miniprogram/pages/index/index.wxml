@@ -39,5 +39,12 @@
       <text>快速新建云函数</text>
     </navigator>
   </view>
+  <view>
+    <image src="{{coach.avatar}}"></image>
+    <text>{{coach.name}}</text>
+    <view>
+      <i-tag wx:for="{{coach.skill}}" wx:key="{{index}}">{{item}}</i-tag>
+    </view>
+  </view>
   <button bindtap='changeData'>点我</button>
 </view>
