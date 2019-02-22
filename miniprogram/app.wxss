@@ -1,7 +1,43 @@
 /**app.wxss**/
+page{
+  background-color: #f8f8f8;
+}
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-sizing: border-box;
+  color: #24292e;
+  font-size: 28rpx;
+  line-height: 1;
+  background-color: #f8f8f8;
 } 
+.flex {
+  display: flex;
+}
+.space-between, .space-around, .flex-center{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.space-around{
+  justify-content: space-around;
+}
+.flex-center{
+  justify-content: center;
+}
+.act-color{
+  color: #f24730
+}
+.act-bg{
+  background-color: #f24730
+}
+.crash-color{
+  color: #999
+}
+.crash-bg{
+  background-color: #999
+}
+.hover-class{
+  opacity: 0.8
+}
+.hover-class-white{
+  background-color: rgba(0, 0, 0, 0.1);
+  opacity: 0.7;
+}

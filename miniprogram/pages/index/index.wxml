@@ -1,50 +1,41 @@
 <!--index.wxml-->
-<view class="container">
-
-  <!-- 用户 openid -->
-  <view class="userinfo">
-    <button 
-      open-type="getUserInfo" 
-      bindgetuserinfo="onGetUserInfo"
-      class="userinfo-avatar"
-      style="background-image: url({{avatarUrl}})"
-    ></button>
-    <view>
-      <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
+<view class='container'>
+  <swiper
+    indicator-dots='true'
+    indicator-color='rgba(255,255,255,0.3)'
+    indicator-active-color='rgba(255,255,255,0.5)'
+    autoplay='true'
+  >
+    <block wx:for='{{imgUrls}}' wx:key='{{index}}'>
+      <swiper-item>
+        <image src='{{item}}' class='slide-image' mode='aspectFill' />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='appointment'>
+    <view class='title-wrap space-between'>
+      <text class='title'>快上课啦！</text>
+      <navigator class='history'>上过的课</navigator>
+    </view>
+    <view class='course flex' wx:for="{{course}}" wx:key='{{index}}'>
+      <view class='img-wrap flex'>
+        <image class='course-img' src='{{item.cover}}' mode='aspectFill'></image>
+        <text class='people-count'><text class='count'>1</text>/12</text>
+      </view>
+      <view class='info-wrap'>
+        <navigator class='name'>{{item.name}}</navigator>
+        <view class='flex'>
+          <text class='time act-color'>14:00 ~ 16:00</text>
+          <navigator class='coach'>{{item.coach.name}}</navigator>
+        </view>
+        <text class='condition'>(满<text class='count'>{{item.condition}}</text>人开课)</text>
+        <view class='tags'>
+          <i-tag wx:for='{{item.tags}}' wx:key='{{index}}' type='border'>{{item}}</i-tag>
+        </view>
+      </view>
+      <view class='handle'>
+        <i-button type="error" size="small">约</i-button>
+      </view>
     </view>
   </view>
-
-
-  <!-- 上传图片 -->
-  <view class="uploader">
-    <view class="uploader-text" bindtap="doUpload">
-      <text>上传图片</text>
-    </view>
-    <view class="uploader-container" wx:if="{{imgUrl}}">
-      <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
-    </view>
-  </view>
-
-
-  <!-- 操作数据库 -->
-  <view class="uploader">
-    <navigator url="../databaseGuide/databaseGuide" open-type="navigate" class="uploader-text">
-      <text>前端操作数据库</text>
-    </navigator>
-  </view>
-
-  <!-- 新建云函数 -->
-  <view class="uploader">
-    <navigator url="../addFunction/addFunction" open-type="navigate" class="uploader-text">
-      <text>快速新建云函数</text>
-    </navigator>
-  </view>
-  <view>
-    <image src="{{coach.avatar}}"></image>
-    <text>{{coach.name}}</text>
-    <view>
-      <i-tag wx:for="{{coach.skill}}" wx:key="{{index}}">{{item}}</i-tag>
-    </view>
-  </view>
-  <button bindtap='changeData'>点我</button>
 </view>

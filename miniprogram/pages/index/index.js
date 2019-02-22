@@ -3,12 +3,11 @@ const app = getApp()
 
 Page({
   data: {
-    avatarUrl: './user-unlogin.png',
-    userInfo: {},
-    logged: false,
-    takeSession: false,
-    requestResult: '',
-    coach: {}
+    imgUrls: [
+      '../../images/banner1.jpg',
+      '../../images/banner2.jpg'
+    ],
+    course: []
   },
 
   onLoad: function() {
@@ -18,7 +17,7 @@ Page({
       })
       return
     }
-
+    this.getCourse()
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -67,70 +66,13 @@ Page({
       }
     })
   },
-
-  // 上传图片
-  doUpload: function () {
-    // 选择图片
-    wx.chooseImage({
-      count: 1,
-      sizeType: ['compressed'],
-      sourceType: ['album', 'camera'],
-      success: function (res) {
-
-        wx.showLoading({
-          title: '上传中',
-        })
-
-        const filePath = res.tempFilePaths[0]
-        
-        // 上传图片
-        const cloudPath = 'my-image' + filePath.match(/\.[^.]+?$/)[0]
-        wx.cloud.uploadFile({
-          cloudPath,
-          filePath,
-          success: res => {
-            console.log('[上传文件] 成功：', res)
-
-            app.globalData.fileID = res.fileID
-            app.globalData.cloudPath = cloudPath
-            app.globalData.imagePath = filePath
-            
-            wx.navigateTo({
-              url: '../storageConsole/storageConsole'
-            })
-          },
-          fail: e => {
-            console.error('[上传文件] 失败：', e)
-            wx.showToast({
-              icon: 'none',
-              title: '上传失败',
-            })
-          },
-          complete: () => {
-            wx.hideLoading()
-          }
-        })
-
-      },
-      fail: e => {
-        console.error(e)
-      }
-    })
-  },
-  changeData(){
+  getCourse(){
     const db = wx.cloud.database()
-    const coachs = db.collection('coach')
-    // coachs.add({
-    //   data: {
-    //     name: 'jyc'
-    //   }
-    // }).then(res => {
-    //   console.log(res)
-    // })
-    coachs.doc('XEMzAeSiwXKAQoAE').get().
+    const course = db.collection('course')
+    course.get().
     then(res => {
       this.setData({
-        coach: res.data
+        course: res.data
       })
       console.log(res)
     }).catch(err => {
