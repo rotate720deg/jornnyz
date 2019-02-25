@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/my/my",
     "pages/appointment/appointment",
     "pages/index/index",
     "pages/userConsole/userConsole",
@@ -11,13 +12,40 @@
     
   ],
   "window": {
-    "backgroundColor": "#f8f8f8",
+    "backgroundColor": "#ffffff",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#f8f8f8",
+    "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTitleText": "全球建面",
     "navigationBarTextStyle": "black"
   },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#f24730",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/nav/index.png",
+        "selectedIconPath": "images/nav/index-active.png"
+      },
+      {
+        "pagePath": "pages/appointment/appointment",
+        "text": "训练",
+        "iconPath": "images/nav/build.png",
+        "selectedIconPath": "images/nav/build-active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/nav/my.png",
+        "selectedIconPath": "images/nav/my-active.png"
+      }
+    ]
+  },
   "usingComponents": {
-    "i-button": "./components/button/index"
+    "i-button": "./components/button/index",
+    "j-course": "./components/course/course",
+    "j-scroll": "./components/scroll/scroll",
+    "i-icon": "./components/icon/index"
   }
 }

@@ -1,0 +1,3 @@
+  <scroll-view class='scroll-view' scroll-y bindscrolltolower="loadmore">
+    <slot></slot>
+  </scroll-view>

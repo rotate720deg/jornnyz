@@ -1,0 +1,27 @@
+<view class='container'>
+  <view class='info flex'>
+    <image class='avatar' mode='aspectFill' src='https://file.iviewui.com/weapp/dist/e5da9fdc97a0b3fb16c115d379820583.jpg'></image>
+    <view class='info-detail flex column'>
+      <text class='text name'>姓名：贾烨超</text>
+      <text class='text gender'>性别：男</text>
+      <text class='text age'>年龄：29</text>
+      <text class='text level'>级别：高级</text>
+    </view>
+  </view>
+  <view class='info-list'>
+    <i-cell-group>
+      <i-cell title="我的约课" is-link>
+        <i-icon slot='icon' type="document" />
+      </i-cell>
+      <i-cell title="我的会员卡" is-link url="/pages/index/index">
+        <i-icon slot='icon' type="businesscard" />
+      </i-cell>
+      <i-cell title="我的数据" is-link >
+        <i-icon slot='icon' type="dynamic" />
+      </i-cell>
+      <i-cell title="训练建议" is-link >
+        <i-icon slot='icon' type="interactive" />
+      </i-cell>
+  </i-cell-group>
+  </view>
+</view>

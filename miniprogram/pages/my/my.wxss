@@ -1,0 +1,48 @@
+/* miniprogram/pages/my/my.wxss */
+.container{
+}
+.info{
+  padding: 30rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #eee;
+}
+.info .avatar{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  border: 1rpx solid #ddd;
+  margin-right: 18rpx;
+}
+.info .info-detail{
+  font-size: 24rpx;
+  line-height: 40rpx;
+  margin-bottom: 10rpx;
+}
+
+.info-item{
+  height: 160rpx;
+  padding: 0 30rpx;
+}
+.info-item text{
+  font-size: 32rpx;
+}
+.info-item>.iconfont{
+  color: #F5A623;
+}
+.info-item .label{
+  display: flex;
+  align-items: center;
+}
+.info-item .icon-wrap{
+  width: 72rpx;
+  height: 72rpx;
+  background:rgba(245,166,35,0.1);
+  line-height:72rpx;
+  text-align: center;
+  margin-right: 20rpx;
+  border-radius: 50%;
+}
+.info-item .label .iconfont{
+  color: #F5A623;
+  margin-left:6rpx;
+}

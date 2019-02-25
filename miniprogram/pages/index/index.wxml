@@ -17,25 +17,6 @@
       <text class='title'>快上课啦！</text>
       <navigator class='history'>上过的课</navigator>
     </view>
-    <view class='course flex' wx:for="{{course}}" wx:key='{{index}}'>
-      <view class='img-wrap flex'>
-        <image class='course-img' src='{{item.cover}}' mode='aspectFill'></image>
-        <text class='people-count'><text class='count'>1</text>/12</text>
-      </view>
-      <view class='info-wrap'>
-        <navigator class='name'>{{item.name}}</navigator>
-        <view class='flex'>
-          <text class='time act-color'>14:00 ~ 16:00</text>
-          <navigator class='coach'>{{item.coach.name}}</navigator>
-        </view>
-        <text class='condition'>(满<text class='count'>{{item.condition}}</text>人开课)</text>
-        <view class='tags'>
-          <i-tag wx:for='{{item.tags}}' wx:key='{{index}}' type='border'>{{item}}</i-tag>
-        </view>
-      </view>
-      <view class='handle'>
-        <i-button type="error" size="small">约</i-button>
-      </view>
-    </view>
+    <j-course wx:for='{{course}}' wx:key='{{index}}' course='{{item}}'/>
   </view>
 </view>

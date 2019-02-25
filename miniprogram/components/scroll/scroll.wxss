@@ -1,0 +1,4 @@
+/* components/scroll/scroll.wxss */
+.scroll-view{
+  height: 100%;
+}

@@ -6,4 +6,9 @@ Page({
   onLoad: function (options) {
 
   },
+  handleChange(e) {
+    this.setData({
+      current: e.detail.key
+    })
+  }
 })

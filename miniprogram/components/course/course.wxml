@@ -1,0 +1,21 @@
+<!--components/course/course.wxml-->
+<view class='course flex'>
+  <view class='img-wrap flex'>
+    <image class='course-img' src='{{course.cover}}' mode='aspectFill'></image>
+    <text class='people-count'><text class='count'>1</text>/12</text>
+  </view>
+  <view class='info-wrap'>
+    <navigator class='name'>{{course.name}}</navigator>
+    <view class='flex'>
+      <text class='time act-color'>14:00 ~ 16:00</text>
+      <navigator class='coach'>{{course.coach.name}}</navigator>
+    </view>
+    <text class='condition'>(满<text class='count'>{{course.condition}}</text>人开课)</text>
+    <view class='tags'>
+      <i-tag i-class='c-tag' wx:for='{{course.tags}}' wx:key='{{index}}' type='border'>{{item}}</i-tag>
+    </view>
+  </view>
+  <view class='handle'>
+    <i-button type="error" size="small">约</i-button>
+  </view>
+</view>

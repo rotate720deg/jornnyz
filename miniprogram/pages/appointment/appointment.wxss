@@ -1,7 +1,18 @@
 /* miniprogram/pages/appointment/appointment.wxss */
+page{
+  height: 100%;
+}
+.container{
+  height: 100%;
+}
 .tabs-large{
   background-color: transparent;
 }
 .tab-large{
   width: 200rpx
+}
+.course-list{
+  flex: 1;
+  padding: 30rpx;
+  box-sizing: border-box;
 }

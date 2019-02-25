@@ -1,5 +1,5 @@
 <!--miniprogram/pages/appointment/appointment.wxml-->
-<view class='container'>
+<view class='container flex column'>
   <i-tabs
     i-class='{{"tabs-large"}}'
     current='{{current}}'
@@ -9,5 +9,14 @@
       <i-tab i-class='{{"tab-large"}}' key='tab1' title='12-28/周五'></i-tab>
       <i-tab i-class='{{"tab-large"}}' key='tab2' title='12-29/周六'></i-tab>
       <i-tab i-class='{{"tab-large"}}' key='tab3' title='12-30/周日'></i-tab>
+      <i-tab i-class='{{"tab-large"}}' key='tab4' title='12-31/周一'></i-tab>
+      <i-tab i-class='{{"tab-large"}}' key='tab5' title='01-01/周二'></i-tab>
   </i-tabs>
+  <view class='j-scroll'>
+    <j-scroll>
+      <view class='course-list'>
+        <j-course wx:for='{{3}}' />
+      </view>
+    </j-scroll>
+  </view>
 </view>
