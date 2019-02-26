@@ -14,6 +14,12 @@ exports.main = async (event, context) => {
       })
       .limit(1)
       .get()
+    if (user.data.length) {
+      console.log('用户已入库')
+      return {
+        msg: '用户已入库'
+      }
+    }
     return await db.collection('user').add({
       data: {
         openid: openid,

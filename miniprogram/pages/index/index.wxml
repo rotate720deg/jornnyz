@@ -17,6 +17,8 @@
       <text class='title'>快上课啦！</text>
       <navigator class='history'>上过的课</navigator>
     </view>
-    <j-course wx:for='{{course}}' wx:key='{{index}}' course='{{item}}'/>
+    <view class='course-list'>
+      <j-course wx:for='{{course}}' wx:key='{{index}}' course='{{item}}'/>
+    </view>
   </view>
 </view>

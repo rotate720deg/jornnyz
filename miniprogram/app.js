@@ -7,8 +7,10 @@ App({
       wx.cloud.init({
         traceUser: true
       })
+      this.db = wx.cloud.database()
+      console.log(this.db)
       this.promiseAdd()
-      this.getOpenid()
+      this.getUserInfo()
     }
   },
   promiseAdd() {
@@ -59,5 +61,6 @@ App({
       this.globalData.openid = res.result.openid
     })
   },
+  db: null,
   globalData:  {}
 })

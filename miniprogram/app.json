@@ -43,6 +43,7 @@
     ]
   },
   "usingComponents": {
+    "i-spin": "./components/spin/index",
     "i-button": "./components/button/index",
     "j-course": "./components/course/course",
     "j-scroll": "./components/scroll/scroll",
