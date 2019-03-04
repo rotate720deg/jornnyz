@@ -1,0 +1,7 @@
+.welcome-wrap{
+  margin: 100rpx 0;
+  text-align: center;
+}
+.welcome-btn{
+  width: 500rpx;
+}

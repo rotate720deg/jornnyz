@@ -20,10 +20,7 @@ exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext()
   const { OPENID } = wxContext
   await cloud.callFunction({
-    name: 'addUser',
-    data: {
-      openid: OPENID
-    }
+    name: 'addUser'
   })
   return {
     event,

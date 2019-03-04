@@ -1,11 +1,11 @@
 <view class='container'>
   <view class='info flex'>
-    <image class='avatar' mode='aspectFill' src='https://file.iviewui.com/weapp/dist/e5da9fdc97a0b3fb16c115d379820583.jpg'></image>
+    <image class='avatar' mode='aspectFill' src='{{userInfo.avatarUrl}}'></image>
     <view class='info-detail flex column'>
-      <text class='text name'>姓名：贾烨超</text>
-      <text class='text gender'>性别：男</text>
-      <text class='text age'>年龄：29</text>
-      <text class='text level'>级别：高级</text>
+      <text class='text name'>姓名：{{userInfo.nickName}}</text>
+      <text class='text gender'>性别：{{userInfo.genderText}}</text>
+      <text class='text age'>年龄：{{userInfo.age}}</text>
+      <text class='text level'>级别：{{userInfo.level}}</text>
     </view>
   </view>
   <view class='info-list'>

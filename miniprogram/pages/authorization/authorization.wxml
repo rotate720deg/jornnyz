@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='welcome-wrap'>
+    <text class='welcome-text'>塑造好身材</text>
+  </view>
+  <view class='welcome-wrap'>
+    <button class='welcome-btn' wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">打开另一个你</button>
+  </view>
+</view>

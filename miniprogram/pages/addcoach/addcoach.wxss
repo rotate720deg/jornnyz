@@ -1,0 +1,37 @@
+/* miniprogram/pages/addcoach/addcoach.wxss */
+page, .container{
+  height: 100%;
+}
+.coach-list{
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.coach-panel{
+  display: flex;
+  padding: 30rpx;
+  background-color:#fff;
+  box-shadow:0px 0px 40rpx 0px rgba(0,0,0,0.1);
+  border-radius: 15rpx;
+  margin-bottom: 30rpx;
+}
+.coach-panel.add{
+  justify-content: center;
+}
+.avatar{
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+}
+.info{
+  flex: 1;
+}
+.name, .nickname{
+  display: block;
+  margin-bottom: 10rpx;
+}
+.name{
+  color: #999;
+}
+.c-tag{
+  margin-right: 20rpx;
+}

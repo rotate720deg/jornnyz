@@ -1,24 +1,50 @@
 <!--index.wxml-->
-<view class='container'>
-  <swiper
-    indicator-dots='true'
-    indicator-color='rgba(255,255,255,0.3)'
-    indicator-active-color='rgba(255,255,255,0.5)'
-    autoplay='true'
-  >
-    <block wx:for='{{imgUrls}}' wx:key='{{index}}'>
-      <swiper-item>
-        <image src='{{item}}' class='slide-image' mode='aspectFill' />
-      </swiper-item>
-    </block>
-  </swiper>
-  <view class='appointment'>
-    <view class='title-wrap space-between'>
-      <text class='title'>快上课啦！</text>
-      <navigator class='history'>上过的课</navigator>
-    </view>
-    <view class='course-list'>
-      <j-course wx:for='{{course}}' wx:key='{{index}}' course='{{item}}'/>
-    </view>
+<view class='container' wx:if='userInfo.openid'>
+  <!-- 管理员 -->
+  <view class='setlist' wx:if='userInfo.admin'>
+    <i-cell-group>
+      <i-cell title="设置展示" is-link>
+        <i-icon slot='icon' type="document" />
+      </i-cell>
+      <i-cell title="添加课表" is-link url="/pages/index/index">
+        <i-icon slot='icon' type="businesscard" />
+      </i-cell>
+      <i-cell title="添加教练" is-link url="/pages/addcoach/addcoach">
+        <i-icon slot='icon' type="dynamic" />
+      </i-cell>
+      <i-cell title="添加会员卡" is-link >
+        <i-icon slot='icon' type="interactive" />
+      </i-cell>
+      <i-cell title="添加课程" is-link >
+        <i-icon slot='icon' type="interactive" />
+      </i-cell>
+      <i-cell title="添加分馆" is-link >
+        <i-icon slot='icon' type="interactive" />
+      </i-cell>
+    </i-cell-group>
   </view>
+  <block wx:else>
+    <swiper
+      indicator-dots='true'
+      indicator-color='rgba(255,255,255,0.3)'
+      indicator-active-color='rgba(255,255,255,0.5)'
+      autoplay='true'
+    >
+      <block wx:for='{{imgUrls}}' wx:key='{{index}}'>
+        <swiper-item>
+          <image src='{{item}}' class='slide-image' mode='aspectFill' />
+        </swiper-item>
+      </block>
+    </swiper>
+    <!-- 普通用户 -->
+    <view class='appointment'>
+      <view class='title-wrap space-between'>
+        <text class='title'>快上课啦！</text>
+        <navigator class='history'>上过的课</navigator>
+      </view>
+      <view class='course-list'>
+        <j-course wx:for='{{course}}' wx:key='{{index}}' course='{{item}}'/>
+      </view>
+    </view>
+  </block>
 </view>

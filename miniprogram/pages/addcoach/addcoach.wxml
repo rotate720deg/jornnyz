@@ -1,0 +1,25 @@
+<!--miniprogram/pages/addcoach/addcoach.wxml-->
+<view class='container flex column'>
+  <view class='j-scroll'>
+    <j-scroll>
+      <view class='coach-list'>
+        <view class='coach-panel' wx:for='{{coachlist}}' wx:key='{{index}}'>
+          <image class='avatar' src='{{item.avatar}}'></image>
+          <view class='info'>
+            <text class='nickname'>昵称：{{item.nickName}}</text>
+            <text class='name'>姓名：{{item.name}}</text>
+            <view class='tags'>
+              <i-tag i-class='c-tag' wx:for='{{item.skill}}' wx:key='{{index}}' type='border'>{{item}}</i-tag>
+            </view>
+          </view>
+          <view class='handle'>
+            <i-button type="error" size="small">取消</i-button>
+          </view>
+        </view>
+        <view class='coach-panel add' bindtap='chooseuser'>
+          <i-icon type="add" size="28" color="#80848f" />
+        </view>
+      </view>
+    </j-scroll>
+  </view>
+</view>

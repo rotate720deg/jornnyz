@@ -1,15 +1,17 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/my/my",
     "pages/appointment/appointment",
-    "pages/index/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
     "pages/databaseGuide/databaseGuide",
     "pages/addFunction/addFunction",
     "pages/deployFunctions/deployFunctions",
-    "pages/chooseLib/chooseLib"
-    
+    "pages/chooseLib/chooseLib",
+    "pages/authorization/authorization",
+    "pages/addcoach/addcoach",
+    "pages/user/user"
   ],
   "window": {
     "backgroundColor": "#ffffff",
@@ -44,9 +46,12 @@
   },
   "usingComponents": {
     "i-spin": "./components/spin/index",
+    "i-tag": "./components/tag/index",
     "i-button": "./components/button/index",
     "j-course": "./components/course/course",
     "j-scroll": "./components/scroll/scroll",
-    "i-icon": "./components/icon/index"
+    "i-icon": "./components/icon/index",
+    "i-cell-group": "./components/cell-group/index",
+    "i-cell": "./components/cell/index"
   }
 }

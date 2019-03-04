@@ -19,17 +19,19 @@ Page({
       return
     }
     if (app.globalData.openid) {
+      this.setData({
+        userInfo: app.globalData.userInfo
+      })
       this.getCourse()
     } else {
-      app.getTokenCallback = this.getCourse
+      app.getOpenidCallback = this.getCourse
     }
   },
-  getCourse(){
-    wx.cloud.init({
-      traceUser: true,
+  getCourse(userInfo){
+    this.setData({
+      userInfo: userInfo
     })
-    const db = wx.cloud.database()
-    const course = db.collection('course')
+    const course = app.db.collection('course')
     course.get().
     j_then(res => {
       this.setData({

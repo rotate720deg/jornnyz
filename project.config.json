@@ -7,11 +7,12 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false
+		"autoAudits": false,
+		"nodeModules": true
 	},
 	"appid": "wx0c1e3f46c7ed37f1",
 	"projectname": "jornnyz",
-	"libVersion": "2.2.5",
+	"libVersion": "2.6.1",
 	"condition": {
 		"search": {
 			"current": -1,
