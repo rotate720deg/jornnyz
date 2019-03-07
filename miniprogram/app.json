@@ -1,5 +1,9 @@
 {
   "pages": [
+    "pages/admin/addcourse/addcourse",
+    "pages/admin/courseList/courseList",
+    "pages/admin/index/index",
+    "pages/admin/addcoach/addcoach",
     "pages/index/index",
     "pages/my/my",
     "pages/appointment/appointment",
@@ -10,8 +14,10 @@
     "pages/deployFunctions/deployFunctions",
     "pages/chooseLib/chooseLib",
     "pages/authorization/authorization",
-    "pages/addcoach/addcoach",
-    "pages/user/user"
+    "pages/user/user",
+    
+    "pages/admin/userList/userList"
+    
   ],
   "window": {
     "backgroundColor": "#ffffff",

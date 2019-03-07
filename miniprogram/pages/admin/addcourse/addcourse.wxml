@@ -1,0 +1,33 @@
+<!--miniprogram/pages/admin/addcourse/addcourse.wxml-->
+<view class='container flex column'>
+  <view class='j-scroll'>
+    <j-scroll>
+      <i-panel title="基础用法">
+        <i-input value="{{ name }}" title="课程名称：" placeholder="课程名称" />
+        <i-input value="{{ price }}" type="number" title="课程价格：" placeholder="课程价格￥" />
+      </i-panel>
+      <view class='select-tags'>
+        <i-input value="{{ tagsText }}" title="选择课程标签：" placeholder="输入请用中文，隔开" />
+        <view class='tags-wrap'>
+          <i-tag i-class='c-tag' 
+            wx:for='{{tags}}' 
+            wx:key='{{index}}'
+            type="border"
+            checkable='{{true}}' 
+            data-index='{{index}}'
+            bindchange="selectTag"
+            type='border' 
+            checked="{{item.checked}}">{{item.name}}</i-tag>
+        </view>
+      </view>
+      <i-input value="{{ tagsText }}" title="上传课程封面" placeholder=""  disabled='{{true}}'/>
+      <view class='cover'>
+        <image wx:if='{{cover}}' class='cover-img' src='{{cover}}' mode='aspectFill'></image>
+        <view class='addBtn flex-center shadow' bindtap='choseCover' wx:else>
+          <i-icon type="add" size="28" color="#80848f" />
+        </view>
+      </view>
+    </j-scroll>
+  </view>
+  <i-button type='error' bind:click="submit">确认</i-button>
+</view>

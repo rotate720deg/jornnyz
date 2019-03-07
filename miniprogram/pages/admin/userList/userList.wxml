@@ -1,0 +1,22 @@
+<!--miniprogram/pages/addcoach/addcoach.wxml-->
+<view class='container flex column'>
+  <view class='search'>
+    <input placeholder='输入真实姓名搜索用户' confirm-type='search' bindconfirm='searchUser'></input>
+  </view>
+  <view class='j-scroll'>
+    <j-scroll>
+      <view class='user-list'>
+        <view class='user-panel' wx:for='{{userlist}}' wx:key='{{index}}'>
+          <image class='avatar' src='{{item.avatarUrl}}'></image>
+          <view class='info'>
+            <text class='nickname'>昵称：{{item.nickName}}</text>
+            <text class='name'>姓名：{{item.name}}</text>
+          </view>
+          <view class='handle'>
+            <i-button data-openid="{{item.openid}}" type="error" size="small" bind:click="choose">添加</i-button>
+          </view>
+        </view>
+      </view>
+    </j-scroll>
+  </view>
+</view>

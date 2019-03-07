@@ -1,0 +1,24 @@
+<!--miniprogram/pages/admin/index/index.wxml-->
+<!-- 管理员 -->
+<view class='setlist' wx:if='userInfo.admin'>
+  <i-cell-group>
+    <i-cell title="设置展示" is-link>
+      <i-icon slot='icon' type="document" />
+    </i-cell>
+    <i-cell title="添加课表" is-link url="/pages/index/index">
+      <i-icon slot='icon' type="businesscard" />
+    </i-cell>
+    <i-cell title="添加教练" is-link url="/pages/admin/addcoach/addcoach">
+      <i-icon slot='icon' type="dynamic" />
+    </i-cell>
+    <i-cell title="添加会员卡" is-link >
+      <i-icon slot='icon' type="interactive" />
+    </i-cell>
+    <i-cell title="添加课程" is-link url="/pages/admin/addcourse/addcourse">
+      <i-icon slot='icon' type="interactive" />
+    </i-cell>
+    <i-cell title="添加分馆" is-link >
+      <i-icon slot='icon' type="interactive" />
+    </i-cell>
+  </i-cell-group>
+</view>

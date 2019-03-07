@@ -47,3 +47,7 @@ page{
 .j-scroll{
   flex: 1;
 }
+.shadow {
+  box-shadow:0px 0px 40rpx 0px rgba(0,0,0,0.1);
+  border-radius: 15rpx;
+}

@@ -22,7 +22,10 @@ Page({
         return '未知'
     }
   },
-  onReady: function () {
-
-  },
+  intoAdmin() {
+    // 点击头像进入控制台，或进入教练界面
+    wx.navigateTo({
+      url: '/pages/admin/index/index',
+    })
+  }
 })

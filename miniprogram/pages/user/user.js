@@ -16,21 +16,19 @@ Page({
       })
     }
     const { currentIndex, currentSize } = this.data
-    app.db.collection('user')
-      .skip(currentIndex)
-      .limit(currentSize)
-      .get()
-      .j_then(res => {
-        if (refresh) {
-          this.setData({
-            userlist: res.data
-          })
-        } else {
-          this.setData({
-            userlist: this.userlist.concat(res.data)
-          })
-        }
+    wx.cloud.callFunction({
+      name: 'router',
+      data: {
+        $url: 'admin/getUserList',
+        skip: currentIndex,
+        limit: currentSize
+      }
+    }).j_then(res => {
+      console.log(res)
+      this.setData({
+        userlist: res.result.data
       })
+    })
   },
   choose(e) {
     console.log(e)

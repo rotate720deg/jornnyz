@@ -38,7 +38,7 @@ App({
     };
     Promise.prototype.j_then = function (success = () => { }, error = () => { }) {
       return this.then((data) => {
-        if (data.result && data.result.errCode) {
+        if (data.result && data.result.code) {
           that.showToast(data.result.errMsg)
         } else {
           success(data)

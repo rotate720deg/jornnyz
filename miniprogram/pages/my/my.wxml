@@ -1,6 +1,6 @@
 <view class='container'>
   <view class='info flex'>
-    <image class='avatar' mode='aspectFill' src='{{userInfo.avatarUrl}}'></image>
+    <image class='avatar' mode='aspectFill' src='{{userInfo.avatarUrl}}' bindtap='intoAdmin'></image>
     <view class='info-detail flex column'>
       <text class='text name'>姓名：{{userInfo.nickName}}</text>
       <text class='text gender'>性别：{{userInfo.genderText}}</text>

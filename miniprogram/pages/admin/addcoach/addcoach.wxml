@@ -4,13 +4,9 @@
     <j-scroll>
       <view class='coach-list'>
         <view class='coach-panel' wx:for='{{coachlist}}' wx:key='{{index}}'>
-          <image class='avatar' src='{{item.avatar}}'></image>
+          <image class='avatar' src='{{item.avatarUrl}}'></image>
           <view class='info'>
             <text class='nickname'>昵称：{{item.nickName}}</text>
-            <text class='name'>姓名：{{item.name}}</text>
-            <view class='tags'>
-              <i-tag i-class='c-tag' wx:for='{{item.skill}}' wx:key='{{index}}' type='border'>{{item}}</i-tag>
-            </view>
           </view>
           <view class='handle'>
             <i-button type="error" size="small">取消</i-button>

@@ -2,11 +2,15 @@
 page, .container{
   height: 100%;
 }
-.coach-list{
+.search input{
+  padding: 30rpx;
+  border-bottom:1rpx solid #eee;
+}
+.user-list{
   padding: 30rpx;
   box-sizing: border-box;
 }
-.coach-panel{
+.user-panel{
   display: flex;
   padding: 30rpx;
   background-color:#fff;
@@ -14,12 +18,13 @@ page, .container{
   border-radius: 15rpx;
   margin-bottom: 30rpx;
 }
-.coach-panel.add{
+.user-panel.add{
   justify-content: center;
 }
 .avatar{
   width: 100rpx;
   height: 100rpx;
+  border-radius: 50%;
   margin-right: 20rpx;
 }
 .info{
